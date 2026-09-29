@@ -634,7 +634,7 @@ def test_calculation_repr_representation_power():
 @patch.object(Operation, 'division')
 @patch.object(Operation, 'power')
 def test_calculation_execute_parameterized(
-    mock_division, mock_multiplication, mock_subtraction, mock_addition, mock_power,
+    mock_power, mock_division, mock_multiplication, mock_subtraction, mock_addition,
     calc_type, a, b, expected_result
 ):
     """
@@ -690,7 +690,7 @@ def test_calculation_execute_parameterized(
 @patch.object(Operation, 'division', return_value=2.0)
 @patch.object(Operation, 'power', return_value=8.0)
 def test_calculation_str_parameterized(
-    mock_division, mock_multiplication, mock_subtraction, mock_addition, mock_power,
+    mock_power, mock_division, mock_multiplication, mock_subtraction, mock_addition,
     calc_type, a, b, expected_str
 ):
     """
